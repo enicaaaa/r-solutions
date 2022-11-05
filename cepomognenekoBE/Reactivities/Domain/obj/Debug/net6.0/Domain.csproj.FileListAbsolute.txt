@@ -1,0 +1,12 @@
+D:\BE\Reactivities\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\BE\Reactivities\Domain\bin\Debug\net6.0\Domain.dll
+D:\BE\Reactivities\Domain\bin\Debug\net6.0\Domain.pdb
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.dll
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.pdb
+D:\BE\Reactivities\Domain\obj\Debug\net6.0\ref\Domain.dll

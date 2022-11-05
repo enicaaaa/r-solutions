@@ -1,14 +1,23 @@
+import { BrowserRouter, Link } from "react-router-dom";
 import "../styles/Navbar.scss";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <div className="navbar">
-      <span className="nav-item nav-item--logo">Ce pomogne neko</span>
-      <span className="nav-item nav-item--feed">Feed</span>
-      <span className="nav-item nav-item--events">Public events</span>
-      <span className="nav-item nav-item--profile">Profile</span>
+      <Link to="/" className="nav-item nav-item--logo">
+        Ce pomogne neko
+      </Link>
+      <Link to="/feed" className="nav-item nav-item--feed">
+        Feed
+      </Link>
+      <Link to="/events" className="nav-item nav-item--events">
+        Public events
+      </Link>
+      <Link to="/profile" className="nav-item nav-item--profile">
+        Profile
+      </Link>
     </div>
   );
-}
+};
 
 export default Navbar;

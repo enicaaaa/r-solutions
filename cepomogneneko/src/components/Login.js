@@ -2,36 +2,37 @@ import "../styles/Login.scss";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-function Login() {
-
-  const {register, handleSubmit } = useForm()
+const Login = () => {
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
-  }
+  };
 
   return (
     <div className="centerLoginDiv">
       <form onSubmit={handleSubmit(onSubmit)}>
         <h3>Username</h3>
-        <input 
+        <input
           type="text"
           placeholder="Username"
-          name="username" 
-          {...register('text')} />
+          name="username"
+          {...register("text")}
+        />
 
         <h3>Password</h3>
         <input
           type="password"
           placeholder="Password"
           name="password"
-          {...register('password')} />
+          {...register("password")}
+        />
         <div>
           <input type="submit" />
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default Login;

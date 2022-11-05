@@ -1,5 +1,8 @@
 import "./App.scss";
+import Login from "./components/Login.js";
 
-function App() {}
+function App() {
+  return <Login />;
+}
 
 export default App;

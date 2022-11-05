@@ -2,7 +2,11 @@ import "./App.scss";
 import Login from "./components/Login.js";
 
 function App() {
-  return <Login />;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 export default App;

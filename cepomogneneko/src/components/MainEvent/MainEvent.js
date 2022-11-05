@@ -28,23 +28,23 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import nature from "../../assets/images/trashPicture1.jpeg"
 
-export default function ImgMediaCard() {
+const MainEvent = (props) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        alt="green iguana"
-        height="140"
-        image="../../../assets/trashPicture1.jpeg"
+        alt="Slike nije ucitana..."
+        height="160"
+        image={nature}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {props.MainEventObject.nazivRadneAkcije}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {props.MainEventObject.decription}
         </Typography>
       </CardContent>
       <CardActions>
@@ -55,3 +55,4 @@ export default function ImgMediaCard() {
   );
 }
 
+export default MainEvent;

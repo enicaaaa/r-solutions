@@ -147,7 +147,12 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  if(page == "'Glave objave'"){
+                    <Link to="/events"></Link>
+                  }
+                  
+                }}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

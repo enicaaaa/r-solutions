@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+
 
 const MainEvent = (props) => {
 
@@ -10,6 +11,10 @@ const MainEvent = (props) => {
           <h3>{props.lokacija}</h3>
   
           <h3>{props.decription}</h3>
+
+          <h3>{props.pictureInput}</h3>
+
+          <h3>{props.startDate}</h3>
 
       </div>
   )

@@ -1,5 +1,4 @@
-import "../styles/UserEvent.scss";
-import nature from "../assets/images/nature.jpeg";
+import nature from "../../assets/images/nature.jpeg";
 
 const UserEvent = () => {
   return (

@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
-import "../styles/Feed.scss";
-import UserEvent from "./UserEvent";
+import UserEvent from "./UserEvent/UserEvent";
 
 const Feed = () => {
   return (

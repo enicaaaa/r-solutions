@@ -1,4 +1,4 @@
-import "./App.scss";
+// import "./App.scss";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Feed from "./components/Feed";
@@ -15,15 +15,17 @@ function App() {
         <Button
           variant="contained"
           className="create-user-event"
+          style={{
+            backgroundColor: "white",
+          }}
           sx={{
-            fontSize: 20,
-            bgColor: "lightgreen",
-            color: "white",
-            border: "1px solid transparent",
+            fontSize: 15,
+            fontWeight: "bold",
+            border: "4px solid transparent",
+            color: "lightgreen",
             ":hover": {
-              bgColor: "blue",
-              color: "lightgreen",
-              border: "1px solid white",
+              bgColor: "lightgreen",
+              border: "4px solid lightgreen",
             },
             position: "absolute",
             top: 80,

@@ -1,28 +1,6 @@
-import { BrowserRouter, Link } from "react-router-dom";
-import "../styles/Navbar.scss";
-
-// const Navbar = () => {
-//   return (
-//     <div className="navbar">
-//       <Link to="/" className="nav-item nav-item--logo">
-//         Ce pomogne neko
-//       </Link>
-//       <Link to="/feed" className="nav-item nav-item--feed">
-//         Feed
-//       </Link>
-//       <Link to="/events" className="nav-item nav-item--events">
-//         Public events
-//       </Link>
-//       <Link to="/profile" className="nav-item nav-item--profile">
-//         Profile
-//       </Link>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 import * as React from "react";
+import { Link } from "react-router-dom";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -35,13 +13,15 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import DeleteIcon from "@mui/icons-material/Delete";
 
 const pages = [
   { name: "Objave korisnika", route: "/feed" },
   { name: "Glavne objave", route: "/events" },
 ];
-const settings = ["Profile", "Logout"];
+const settings = [
+  { name: "Profil", route: "/profile" },
+  { name: "Logout", route: "/" },
+];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -119,7 +99,7 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <Link to={page.route} key={page.name}>
+                <Link to={page.route} key={page.name} className="navbar-item">
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
@@ -148,7 +128,7 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to={page.route} key={page.name}>
+              <Link to={page.route} key={page.name} className="navbar-item">
                 <Button sx={{ my: 2, color: "white", display: "block" }}>
                   {page.name}
                 </Button>
@@ -179,9 +159,15 @@ function Navbar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                <Link
+                  to={setting.route}
+                  key={setting.name}
+                  className="navbar-item"
+                >
+                  <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting.name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

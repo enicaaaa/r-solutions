@@ -1,10 +1,8 @@
 import "./App.scss";
 import Navbar from "./components/Navbar";
-import Login from "./components/Login.js";
-import MainEvent from "./components/MainEvent.js";
-import CreateMainEvent from "./components/CreateMainEvent.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Feed from "./components/Feed";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -13,9 +11,10 @@ function App() {
         <Navbar />
         <div>
           <Routes>
-            <Route index element={<h1>Main</h1>} />
+            <Route path="/" element={<Navigate to="/feed" />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/events" element={<h1>Main events</h1>} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </BrowserRouter>

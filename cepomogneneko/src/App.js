@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <div>
           <Routes>
-            <Route index element={<h1>Main</h1>} />
+          
             <Route path="/feed" element={<Feed />} />
             <Route path="/events" element={<MainEventList/>} />
           </Routes>

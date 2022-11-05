@@ -20,7 +20,7 @@ const MainEventList = () => {
     startDate: "201-07-2015"
   }
 
-  console.log("Ulazi")
+  console.log("Ulazi u Main Event List")
 
   return (
     <>

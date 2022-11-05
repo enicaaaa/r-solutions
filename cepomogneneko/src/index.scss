@@ -1,3 +1,11 @@
+@import "./styles/helpers/util.scss";
+@import "./App.scss";
+@import "./styles/Feed.scss";
+@import "./styles/Login.scss";
+@import "./styles/Navbar.scss";
+@import "./styles/Profile.scss";
+@import "./styles/UserEvent.scss";
+
 * {
   box-sizing: border-box;
 }

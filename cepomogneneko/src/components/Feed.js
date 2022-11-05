@@ -1,10 +1,9 @@
-import "../styles/Feed.scss";
-import UserEvent from "./UserEvent";
+import { Button } from "@mui/material";
+import UserEvent from "./UserEvent/UserEvent";
 
 const Feed = () => {
   return (
     <>
-      <h1>Feed: </h1>
       <UserEvent />
       <UserEvent />
       <UserEvent />

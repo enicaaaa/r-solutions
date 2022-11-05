@@ -18,8 +18,8 @@ const MainEvent = () => {
           <input 
             type="text"
             placeholder="Ocistimo reku Nisavu"
-            name="naziv-radne-akcije" 
-            {...register('naziv-radne-akcije')} />
+            name="nazivRadneAkcije" 
+            {...register('nazivRadneAkcije')} />
 
           <h3>Lokacija</h3>
           <input 
@@ -31,21 +31,21 @@ const MainEvent = () => {
           <h3>Opis problema</h3>
           <input
             type="text"
-            placeholder="Password"
+            placeholder="Velika gomila djubreta na reci Nisavi"
             name="decription"
             {...register('decription')} />
 
           <h3>Dodaj Sliku</h3>
           <input
             type="file"
-            name="picture-input"
-            {...register('picture-input')} />
+            name="pictureInput"
+            {...register('pictureInput')} />
 
           <h3>Datum pocetka</h3>
           <input
             type="date"
-            name="start-date"
-            {...register('start-date')} />
+            name="startDate"
+            {...register('startDate')} />
           <div>
             <input type="submit" />
           </div>

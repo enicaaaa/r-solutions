@@ -2,7 +2,15 @@ $dimension: 100px;
 
 .user-event {
   border: 2px solid green;
+  margin-bottom: 20px;
 }
+
+.user-event__in-progress {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .user-event__info-container {
   display: flex;
   justify-content: row;

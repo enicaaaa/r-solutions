@@ -1,4 +1,3 @@
-// import "./App.scss";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Feed from "./components/Feed";
@@ -9,31 +8,9 @@ import { Stack } from "@mui/system";
 
 function App() {
   return (
-    <Container className="app" sx={{ display: "flex" }}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Container className="app" sx={{ display: "flex" }}>
         <Navbar />
-        <Button
-          variant="contained"
-          className="create-user-event"
-          style={{
-            backgroundColor: "white",
-          }}
-          sx={{
-            fontSize: 15,
-            fontWeight: "bold",
-            border: "4px solid transparent",
-            color: "lightgreen",
-            ":hover": {
-              bgColor: "lightgreen",
-              border: "4px solid lightgreen",
-            },
-            position: "absolute",
-            top: 80,
-          }}
-          size="large"
-        >
-          Prijavi mesto
-        </Button>
         <Stack className="content-container">
           <Routes>
             <Route path="/" element={<Navigate to="/feed" />} />
@@ -42,8 +19,8 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </Stack>
-      </BrowserRouter>
-    </Container>
+      </Container>
+    </BrowserRouter>
   );
 }
 

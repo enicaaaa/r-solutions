@@ -12,28 +12,30 @@ function App() {
     <Container className="app" sx={{ display: "flex" }}>
       <BrowserRouter>
         <Navbar />
-        <Button
-          variant="contained"
-          className="create-user-event"
-          style={{
-            backgroundColor: "white",
-          }}
-          sx={{
-            fontSize: 15,
-            fontWeight: "bold",
-            border: "4px solid transparent",
-            color: "lightgreen",
-            ":hover": {
-              bgColor: "lightgreen",
-              border: "4px solid lightgreen",
-            },
-            position: "absolute",
-            top: 80,
-          }}
-          size="large"
-        >
-          Prijavi mesto
-        </Button>
+        <div>
+          <Button
+            variant="contained"
+            className="create-user-event"
+            style={{
+              backgroundColor: "white",
+            }}
+            sx={{
+              fontSize: 15,
+              fontWeight: "bold",
+              border: "4px solid transparent",
+              color: "lightgreen",
+              ":hover": {
+                bgColor: "lightgreen",
+                border: "4px solid lightgreen",
+              },
+              position: "absolute",
+              top: 80,
+            }}
+            size="large"
+          >
+            Prijavi mesto
+          </Button>
+        </div>
         <Stack className="content-container">
           <Routes>
             <Route path="/" element={<Navigate to="/feed" />} />

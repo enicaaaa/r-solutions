@@ -6,9 +6,33 @@
 }
 
 .make-space-for-navbar{
-    margin-top: 170px;
+    margin-top: 30px;
 }
 
 .spacer-between-main-events{
-    margin: 20px;
+    margin: 40px;
+}
+
+.div-divider-80{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 3px;
+    background-color: #39ba37;
+    width: 80%;
+    border-radius: 20%;
+    margin-bottom: 10px;
+}
+
+.div-divider-50{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 3px;
+    background-color: #39ba37;
+    width: 50%;
+    border-radius: 20%;
+    margin-bottom: 20px;
+}
+
+.space-left-10px{
+    margin-left: 10px;
 }

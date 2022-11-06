@@ -10,9 +10,12 @@ import Typography from '@mui/material/Typography';
 import nature from "../../assets/images/trashPicture1.jpeg"
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { Box } from "@mui/system";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const MainEventTumblr = (props) => {
+const MainEvent = (props) => {
+
+    const mainEventID = useParams()
+
   return (
     <div className='center-div-container'>
       <Card sx={{ width: "75%", minWidth: "320px" }}>
@@ -65,4 +68,4 @@ const MainEventTumblr = (props) => {
   );
 }
 
-export default MainEventTumblr;
+export default MainEvent;

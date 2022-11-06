@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import MainEventList from "./components/MainEvent/MainEventList";
 import { Button, Container } from "@mui/material";
 import { Stack } from "@mui/system";
+import MainEvent from "./components/MainEvent/MainEvent";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Navigate to="/feed" />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/events" element={<MainEventList />} />
+            <Route path="/events/:id" element={<MainEvent />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </Stack>

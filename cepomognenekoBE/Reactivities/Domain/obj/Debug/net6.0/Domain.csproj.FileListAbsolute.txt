@@ -10,3 +10,15 @@ D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.dll
 D:\BE\Reactivities\Domain\obj\Debug\net6.0\refint\Domain.dll
 D:\BE\Reactivities\Domain\obj\Debug\net6.0\Domain.pdb
 D:\BE\Reactivities\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\bin\Debug\net6.0\Domain.dll
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\bin\Debug\net6.0\Domain.pdb
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.dll
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\Domain.pdb
+D:\r-solutions\cepomognenekoBE\Reactivities\Domain\obj\Debug\net6.0\ref\Domain.dll

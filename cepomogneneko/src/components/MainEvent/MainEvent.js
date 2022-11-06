@@ -1,23 +1,21 @@
-import React from 'react'
+import React from "react";
 import "../../styles/MainEvent.scss";
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import nature from "../../assets/images/trashPicture1.jpeg"
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import nature from "../../assets/images/trashPicture1.jpeg";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { Box } from "@mui/system";
 import { Link, useParams } from "react-router-dom";
 
 const MainEvent = (props) => {
-
-    const mainEventID = useParams()
+  const mainEventID = useParams();
 
   return (
-    <div className='center-div-container'>
+    <div className="center-div-container">
       <Card sx={{ width: "75%", minWidth: "320px" }}>
         <CardMedia
           component="img"
@@ -32,10 +30,10 @@ const MainEvent = (props) => {
           <Typography variant="body2" color="text.secondary">
             {props.MainEventObject.decription}
           </Typography>
-          <div className='center-div-container'>
-            <div className='div-divider-80'></div>
+          <div className="center-div-container">
+            <div className="div-divider-80"></div>
           </div>
-          <div className='center-div-container'>
+          <div className="center-div-container">
             <div>
               <Typography variant="body2" color="text.secondary">
                 Date: 29.11.2022.
@@ -48,16 +46,16 @@ const MainEvent = (props) => {
               <Box className="user-event__in-progress">
                 <Brightness1Icon sx={{ color: "red" }} />
                 <Typography variant="body2" color="text.secondary">
-                Nije Ocisceno
-              </Typography>
+                  Nije Ocisceno
+                </Typography>
               </Box>
             </div>
           </div>
-          <div className='center-div-container'>
-            <div className='div-divider-80'></div>
+          <div className="center-div-container">
+            <div className="div-divider-80"></div>
           </div>
           <Typography variant="body2" color="text.secondary">
-                Broj Prijavljenih: 89
+            Broj Prijavljenih: 89
           </Typography>
         </CardContent>
         <CardActions>
@@ -66,6 +64,6 @@ const MainEvent = (props) => {
       </Card>
     </div>
   );
-}
+};
 
 export default MainEvent;

@@ -12,11 +12,12 @@
 
 body {
   margin: 0;
-  background-color: rgb(170, 170, 224);
+  // background-color: #6d98ba;
+  // border: 5px solid red;
 }
 
 @media (min-width: 900px) {
   body {
-    background-color: rgb(72, 72, 173);
+    // border: 5px solid rgb(9, 255, 0);
   }
 }

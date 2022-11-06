@@ -8,6 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { Box } from "@mui/system";
+import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 
 const MainEvent = (props) => {

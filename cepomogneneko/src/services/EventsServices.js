@@ -11,3 +11,27 @@ export const GetAllUserEvents = async (type) => {
         console.log(e.message);
     }
 } 
+
+export const CreateEventttttt = async (ev) => {
+    try 
+    { 
+        const {data} = await axios.post(`http://localhost:5000/Events/CreateEvents?userId=${ev.id}`, ev );
+        return data; 
+    }
+    catch(e)
+    { 
+        console.log(e.message);
+    }
+} 
+
+export const Loginnn = async (auth) => {
+    try 
+    { 
+        const {data} = await axios.post(`http://localhost:5000/User/IsUserAuth`, auth );
+        return data; 
+    }
+    catch(e)
+    { 
+        console.log(e.message);
+    }
+} 

@@ -6,6 +6,8 @@ using Persistence;
 
 namespace API.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly DataContext _dataContext;
@@ -29,18 +31,18 @@ namespace API.Controllers
             return users;
         }
 
-        [HttpPost("UserLogIn")]
-        public async Task<bool> IsUserAuth([FromBody] AuthDTO auth)
+        [HttpPost("IsUserAuth")]
+        public async Task<Guid?> IsUserAuth([FromBody] AuthDTO auth)
         {
             var users = await _dataContext.Users.Where(u => u.Username == auth.username).ToListAsync();
             foreach (var user in users)
             {
                 if (user.Password == auth.password)
                 {
-                    return true;
+                    return user.Id;
                 }
             }
-            return false;
+            return null;
         }
 
 

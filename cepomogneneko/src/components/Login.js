@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import Card from '@mui/material/Card';
@@ -6,17 +6,23 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Loginnn } from '../services/EventsServices';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
-    console.log(data);
+    Loginnn(data).then((response) => {
+      localStorage.setItem("guid", response);
+      if(response != null)
+        navigate('/feed');
+    });
   };
 
   return (
-    
-      
         <div className="centerLoginDiv">
           <Card sx={{ width: "75%", minWidth: "320px" }}>
           <div className="centerElementsInLoginForm">

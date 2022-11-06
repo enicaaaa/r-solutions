@@ -14,7 +14,7 @@ const Feed = () => {
 
   return (
     <Grid container flexDirection="row" justifyContent="center" spacing={2}>
-      {events.map(e =>
+      {events?.map(e =>
         <Grid key={e.id} item xs={12} sm={8} md={6} lg={5}>
           <UserEvent
             flag={e.flag}

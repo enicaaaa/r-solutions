@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "../../styles/MainEvent.scss";
 
 import Card from '@mui/material/Card';
@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const MainEvent = (props) => {
 
   return (
-    <div className='center-div-container'>
+    <div className="center-div-container">
       <Card sx={{ width: "75%", minWidth: "320px" }}>
         <CardMedia
           component="img"
@@ -28,10 +28,10 @@ const MainEvent = (props) => {
           <Typography variant="body2" color="text.secondary">
             {props.description}
           </Typography>
-          <div className='center-div-container'>
-            <div className='div-divider-80'></div>
+          <div className="center-div-container">
+            <div className="div-divider-80"></div>
           </div>
-          <div className='center-div-container'>
+          <div className="center-div-container">
             <div>
               <Typography variant="body2" color="text.secondary">
                 Date: 29.11.2022.
@@ -49,19 +49,27 @@ const MainEvent = (props) => {
               </Box>
             </div>
           </div>
-          <div className='center-div-container'>
-            <div className='div-divider-80'></div>
+          <div className="center-div-container">
+            <div className="div-divider-80"></div>
           </div>
           <Typography variant="body2" color="text.secondary">
-                Broj Prijavljenih: 89
+            Broj Prijavljenih: 89
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to={"/events/123"}>Saznaj vise</Link>
+          <Button size="small">Ukljuci i mene</Button>
+          <Button size="small" disabled={true}>
+            Zapocni
+          </Button>
+          <Button size="small" disabled={true}>
+            Zaustavi
+          </Button>
+
+          {/* <Link to={"/events/123"}>Saznaj vise</Link> */}
         </CardActions>
       </Card>
     </div>
   );
-}
+};
 
 export default MainEvent;

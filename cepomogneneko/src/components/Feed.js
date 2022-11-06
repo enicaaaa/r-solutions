@@ -14,13 +14,13 @@ const Feed = () => {
 
   return (
     <Grid container flexDirection="row" justifyContent="center" spacing={2}>
-      {events.map(e => 
+      {events.map(e =>
         <Grid key={e.id} item xs={12} sm={8} md={6} lg={5}>
-          <UserEvent 
+          <UserEvent
             flag={e.flag}
-            img={e.imgBefore} 
+            img={e.imgBefore}
             username={e.user.username}
-            location={e.user.city} 
+            location={e.user.city}
             time={"14min"}
             desc={e.description}
           />

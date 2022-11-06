@@ -12,9 +12,10 @@ import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { Box } from "@mui/system";
 import { Link, useParams } from "react-router-dom";
 
-const MainEvent = (props) => {
+const MainEvent = () => {
 
     const mainEventID = useParams()
+    console.log(mainEventID.id)
 
   return (
     <div className='center-div-container'>
@@ -27,10 +28,10 @@ const MainEvent = (props) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.MainEventObject.nazivRadneAkcije}
+            Radna Akcija
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {props.MainEventObject.decription}
+            Opisssis dna sdmaiwjd oabnjsbndj basbdlka bslkdb 
           </Typography>
           <div className='center-div-container'>
             <div className='div-divider-80'></div>
@@ -61,7 +62,11 @@ const MainEvent = (props) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to={"/events/123"}>Saznaj vise</Link>
+            <Button size="small">Ukljuci i mene</Button>
+            <Button size="small" disabled={true}>Zapocni</Button>
+            <Button size="small" disabled={true}>Zaustavi</Button>
+
+          {/* <Link to={"/events/123"}>Saznaj vise</Link> */}
         </CardActions>
       </Card>
     </div>

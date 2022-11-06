@@ -27,6 +27,11 @@ $dimension: 150px;
   padding-left: 20px;
 }
 
+.user-event__event-timer {
+  display: flex;
+  align-items: center;
+}
+
 .user-event__image {
   width: $dimension;
   height: $dimension;

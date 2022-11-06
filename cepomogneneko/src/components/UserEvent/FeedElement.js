@@ -30,13 +30,6 @@ const FeedElement = () => {
   const [image, setImage] = useState();
   const navigate = useNavigate();
 
-  //   useEffect(() => {
-  //     console.log("useEffect");
-  //     if (localStorage.getItem("isAdmin")) {
-  //       setIsAdmin(true);
-  //     }
-  //   }, []);
-
   return (
     <Card className="feed-element">
       <CardMedia

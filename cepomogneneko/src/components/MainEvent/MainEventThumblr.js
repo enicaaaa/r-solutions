@@ -7,7 +7,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import nature from "../../assets/images/trashPicture1.jpeg"
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
@@ -18,16 +17,15 @@ const MainEventTumblr = (props) => {
       <Card sx={{ width: "75%", minWidth: "320px" }}>
         <CardMedia
           component="img"
-          alt="Slike nije ucitana..."
           height="240"
-          image={nature}
+          image={props.MainEventObject.imgBefore}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.MainEventObject.nazivRadneAkcije}
+            {props.MainEventObject.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {props.MainEventObject.decription}
+            {props.MainEventObject.description}
           </Typography>
           <div className='center-div-container'>
             <div className='div-divider-80'></div>
@@ -35,7 +33,7 @@ const MainEventTumblr = (props) => {
           <div className='center-div-container'>
             <div>
               <Typography variant="body2" color="text.secondary">
-                Date: 29.11.2022.
+                Date: {props.MainEventObject.eventCreatedAt}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Lokacija: Nis
@@ -45,7 +43,7 @@ const MainEventTumblr = (props) => {
               <Box className="user-event__in-progress">
                 <Brightness1Icon sx={{ color: "red" }} />
                 <Typography variant="body2" color="text.secondary">
-                Nije Ocisceno
+                { props.MainEventObject.flag === "notCleaned" ? "Neocisceno" : props.MainEventObject.flag }
               </Typography>
               </Box>
             </div>

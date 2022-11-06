@@ -42,7 +42,7 @@ namespace API.Controllers
             try
             {
                 if (type == "user" || type == "public")
-                    return await _dataContext.Events.Where(q => q.Type == type).ToListAsync();
+                    return await _dataContext.Events.Include(p => p.User).Where(q => q.Type == type).ToListAsync();
                 return new List<Event>();
             }
             catch (Exception exc)
@@ -89,13 +89,16 @@ namespace API.Controllers
             try
             {
                 var ev = await _dataContext.Events.FindAsync(eventId);
-                TimeSpan durationTime = DateTime.Now.Subtract(ev.EventAssignedAt);
+                if (ev.EventAssignedAt != null)
+                {
+                    TimeSpan durationTime = DateTime.Now.Subtract((DateTime)ev.EventAssignedAt);
 
-
-                ev.EventDurationTime = durationTime;
-                ev.Flag = flag;
-                ev.ImgAfter = img;
-                await _dataContext.SaveChangesAsync();
+                    ev.EventDurationTime = durationTime;
+                    ev.Flag = flag;
+                    ev.ImgAfter = img;
+                    await _dataContext.SaveChangesAsync();
+                    return Ok();
+                }
                 return Ok();
             }
             catch (Exception exc)
@@ -104,14 +107,25 @@ namespace API.Controllers
             }
         }
 
+        [HttpPost("AssignEvent/{eventId}")]
+        public async Task<IActionResult> AssignEvent([FromBody] User user, Guid eventId)
+        {
+            var ev = await _dataContext.Events.FindAsync(eventId);
+            ev.Assignee.Add(user);
+            await _dataContext.SaveChangesAsync();
+            return Ok();
+        }
+
+
+
         [HttpGet("GetAllEvents")]
         public async Task<List<Event>> GetAllEvents()
         {
             try
             {
-                return await _dataContext.Events.ToListAsync();
+                return await _dataContext.Events.Include(p=> p.User).ToListAsync();
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 throw new Exception(exc.Message);
             }

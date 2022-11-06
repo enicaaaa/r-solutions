@@ -49,7 +49,7 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("EventAssignedAt")
+                    b.Property<DateTime?>("EventAssignedAt")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("EventCreatedAt")

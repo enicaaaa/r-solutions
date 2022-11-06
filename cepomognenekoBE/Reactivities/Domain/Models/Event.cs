@@ -20,7 +20,7 @@ namespace Domain.Models
         public string Type { get; set; } = string.Empty;
         public int Points { get; set; }
         public DateTime EventCreatedAt { get; set; }
-        public DateTime EventAssignedAt { get; set; }
+        public DateTime? EventAssignedAt { get; set; }
         public TimeSpan? EventDurationTime { get; set; }
 
     }

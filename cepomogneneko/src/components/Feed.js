@@ -8,6 +8,13 @@ const Feed = () => {
       <UserEvent />
       <UserEvent />
       <UserEvent />
+      <UserEvent />
+      <UserEvent />
+      <UserEvent />
+      <UserEvent />
+      <UserEvent />
+      <UserEvent />
+      <UserEvent />
     </>
   );
 };

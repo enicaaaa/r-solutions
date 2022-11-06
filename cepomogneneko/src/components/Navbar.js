@@ -20,6 +20,7 @@ const pages = [
 ];
 const settings = [
   { name: "Profil", route: "/profile" },
+  { name: "Napravi čišćenje", route: "/create-user-event" },
   { name: "Logout", route: "/" },
 ];
 
@@ -47,7 +48,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="absolute" sx={{ bgcolor: "black" }}>
+    <AppBar position="fixed" sx={{ bgcolor: "black" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

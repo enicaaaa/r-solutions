@@ -6,6 +6,7 @@ import MainEventList from "./components/MainEvent/MainEventList";
 import { Button, Container } from "@mui/material";
 import { Stack } from "@mui/system";
 import MainEvent from "./components/MainEvent/MainEvent";
+import CreateUserEvent from "./components/UserEvent/CreateUserEvent";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/events" element={<MainEventList />} />
             <Route path="/events/:id" element={<MainEvent />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/create-user-event" element={<CreateUserEvent />}/>
           </Routes>
         </Stack>
       </Container>

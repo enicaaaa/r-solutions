@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import MainEventList from "./components/MainEvent/MainEventList";
-import { Button, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import { Stack } from "@mui/system";
 import MainEvent from "./components/MainEvent/MainEvent";
 import CreateUserEvent from "./components/UserEvent/CreateUserEvent";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Stack className="content-container">
           <Routes>
             <Route path="/" element={<Navigate to="/feed" />} />
+            <Route path="/login" element={<Login to="/login" />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/events" element={<MainEventList />} />
             <Route path="/events/:id" element={<MainEvent />} />

@@ -86,8 +86,6 @@ namespace API.Controllers
         [HttpPut("FinishEvent")]
         public async Task<IActionResult> FinishEvent([FromBody] string flag, string img, Guid eventId)
         {
-
-
             try
             {
                 var ev = await _dataContext.Events.FindAsync(eventId);
@@ -101,6 +99,19 @@ namespace API.Controllers
                 return Ok();
             }
             catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
+            }
+        }
+
+        [HttpGet("GetAllEvents")]
+        public async Task<List<Event>> GetAllEvents()
+        {
+            try
+            {
+                return await _dataContext.Events.ToListAsync();
+            }
+            catch(Exception exc)
             {
                 throw new Exception(exc.Message);
             }

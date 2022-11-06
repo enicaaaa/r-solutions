@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import UserEvent from "./UserEvent/UserEvent";
 
 const Feed = () => {
@@ -23,20 +23,6 @@ const Feed = () => {
         <UserEvent />
       </Grid>
     </Grid>
-    // <Stack className="feed">
-
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    //   <UserEvent />
-    // </Stack>
   );
 };
 

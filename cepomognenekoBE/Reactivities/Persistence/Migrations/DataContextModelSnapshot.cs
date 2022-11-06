@@ -55,7 +55,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("EventCreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("EventDurationTime")
+                    b.Property<TimeSpan?>("EventDurationTime")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Flag")
@@ -70,7 +70,11 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("LocationId")
+                    b.Property<Guid?>("LocationId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Points")
@@ -80,9 +84,14 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("LocationId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Events");
                 });
@@ -146,11 +155,17 @@ namespace Persistence.Migrations
                 {
                     b.HasOne("Domain.Models.Location", "Location")
                         .WithMany()
-                        .HasForeignKey("LocationId")
+                        .HasForeignKey("LocationId");
+
+                    b.HasOne("Domain.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Location");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Models.User", b =>

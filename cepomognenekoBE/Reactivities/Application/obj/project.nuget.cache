@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DN2cptBEe2dqeX6dgnpttKZwDz9+cXcd+/O/HBaV9xy2zTf2eWxBpFyW7wcgZMh+9KO+VF1CLw5XzVo2d7CXlw==",
+  "dgSpecHash": "GOFTERNRmQyZ9wuNsfdBeSDfHjxv7T57qvDs8UNU4CsVzgC1VO8++neDcA4oO1YODhmY1L0LVDW2QRYt52Y8cQ==",
   "success": true,
-  "projectFilePath": "D:\\BE\\Reactivities\\Application\\Application.csproj",
+  "projectFilePath": "D:\\r-solutions\\cepomognenekoBE\\Reactivities\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
